@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import Home from "./pages/Home";
@@ -12,24 +11,81 @@ import Weather from "./pages/Weather";
 import MarketPrices from "./pages/MarketPrices";
 import PestAlerts from "./pages/PestAlerts";
 import SoilAnalysis from "./pages/SoilAnalysis";
+import FarmManagement from "./pages/FarmManagement";
+import FarmActivities from "./pages/FarmActivities";
+import CropRecommendation from "./pages/CropRecommendation";
+import Products from "./pages/Products";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import OrderSuccess from "./pages/OrderSuccess";
+import MyOrders from "./pages/MyOrders";
+import OrderDetails from "./pages/OrderDetails";
+import AdminOrders from "./pages/AdminOrders";
+import AdminDashboard from "./pages/AdminDashboard";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
     <>
-      <Navbar />
-
       <Routes>
 
-        {/* Home */}
-        <Route path="/" element={<Home />} />
+        {/* =====================================================
+            HOME
+        ===================================================== */}
 
-        {/* Login */}
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-        {/* Register */}
-        <Route path="/register" element={<Register />} />
+        {/* =====================================================
+            LOGIN
+        ===================================================== */}
 
-        {/* Dashboard */}
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        {/* =====================================================
+            PROFILE
+        ===================================================== */}
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            REGISTER
+        ===================================================== */}
+
+        <Route
+          path="/register"
+          element={<Register />}
+        />
+
+        {/* =====================================================
+           SETTINGS
+        ===================================================== */}
+
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            FARMER DASHBOARD
+        ===================================================== */}
+
         <Route
           path="/dashboard"
           element={
@@ -39,7 +95,10 @@ function App() {
           }
         />
 
-        {/* Crop Management */}
+        {/* =====================================================
+            CROP MANAGEMENT
+        ===================================================== */}
+
         <Route
           path="/crops"
           element={
@@ -49,7 +108,149 @@ function App() {
           }
         />
 
-        {/* Weather */}
+        {/* =====================================================
+            CROP RECOMMENDATION
+        ===================================================== */}
+
+        <Route
+          path="/crop-recommendation"
+          element={
+            <ProtectedRoute>
+              <CropRecommendation />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            PRODUCTS
+        ===================================================== */}
+
+        <Route
+          path="/products"
+          element={
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            CART
+        ===================================================== */}
+
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            CHECKOUT
+        ===================================================== */}
+
+        <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute>
+              <Checkout />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            ORDER SUCCESS
+        ===================================================== */}
+
+        <Route
+          path="/order-success"
+          element={<OrderSuccess />}
+        />
+
+        {/* =====================================================
+            MY ORDERS
+        ===================================================== */}
+
+        <Route
+          path="/my-orders"
+          element={
+            <ProtectedRoute>
+              <MyOrders />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            ORDER DETAILS
+        ===================================================== */}
+
+        <Route
+          path="/order-details/:id"
+          element={
+            <ProtectedRoute>
+              <OrderDetails />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            ADMIN DASHBOARD
+        ===================================================== */}
+
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            ADMIN ORDERS
+        ===================================================== */}
+
+        <Route
+          path="/admin/orders"
+          element={
+            <ProtectedRoute>
+              <AdminOrders />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            FARM MANAGEMENT
+        ===================================================== */}
+
+        <Route
+          path="/farm-management"
+          element={
+            <ProtectedRoute>
+              <FarmManagement />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            FARM ACTIVITIES
+        ===================================================== */}
+
+        <Route
+          path="/farm-activities"
+          element={
+            <ProtectedRoute>
+              <FarmActivities />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* =====================================================
+            WEATHER
+        ===================================================== */}
+
         <Route
           path="/weather"
           element={
@@ -59,7 +260,10 @@ function App() {
           }
         />
 
-        {/* Market Prices */}
+        {/* =====================================================
+            MARKET PRICES
+        ===================================================== */}
+
         <Route
           path="/market-prices"
           element={
@@ -69,7 +273,10 @@ function App() {
           }
         />
 
-        {/* Pest Alerts */}
+        {/* =====================================================
+            PEST ALERTS
+        ===================================================== */}
+
         <Route
           path="/pest-alerts"
           element={
@@ -78,6 +285,11 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* =====================================================
+            SOIL ANALYSIS
+        ===================================================== */}
+
         <Route
           path="/soil-analysis"
           element={
@@ -86,8 +298,8 @@ function App() {
             </ProtectedRoute>
           }
         />
-      </Routes>
 
+      </Routes>
     </>
   );
 }

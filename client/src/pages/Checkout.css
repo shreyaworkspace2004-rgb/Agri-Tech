@@ -1,0 +1,40 @@
+.checkout-page {
+    min-height: 100vh;
+    background: #f8faf8;
+}
+
+.checkout-page .card {
+    border-radius: 16px;
+}
+
+.checkout-page .form-control {
+    border-radius: 10px;
+    padding: 11px 14px;
+}
+
+.checkout-page .form-control:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+.checkout-page textarea {
+    resize: vertical;
+}
+
+.checkout-products {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.checkout-products::-webkit-scrollbar {
+    width: 5px;
+}
+
+.checkout-products::-webkit-scrollbar-thumb {
+    background: #198754;
+    border-radius: 10px;
+}
+
+.checkout-page .btn {
+    border-radius: 10px;
+}

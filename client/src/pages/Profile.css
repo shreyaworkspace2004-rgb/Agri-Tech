@@ -1,0 +1,148 @@
+/* =====================================================
+   PROFILE PAGE
+===================================================== */
+
+.profile-page {
+    min-height: 100vh;
+}
+
+/* =====================================================
+   PROFILE SUMMARY CARD
+===================================================== */
+
+.profile-summary-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #198754;
+    color: white;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.25);
+}
+
+/* =====================================================
+   PROFILE CARDS
+===================================================== */
+
+.profile-page .card {
+    border-radius: 16px;
+}
+
+.profile-page .card-body {
+    border-radius: 16px;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.profile-page .form-label {
+    color: #333;
+}
+
+.profile-page .form-control {
+    border-radius: 10px;
+    min-height: 45px;
+}
+
+.profile-page textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.profile-page .form-control:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+/* =====================================================
+   DISABLED EMAIL
+===================================================== */
+
+.profile-page .form-control:disabled {
+    background-color: #f5f5f5;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.profile-page .btn {
+    border-radius: 10px;
+}
+
+.profile-page .btn-success {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* =====================================================
+   ALERTS
+===================================================== */
+
+.profile-page .alert {
+    border-radius: 12px;
+}
+
+/* =====================================================
+   PROFILE INFORMATION
+===================================================== */
+
+.profile-summary-card hr {
+    margin: 25px 0;
+}
+
+.profile-summary-card p {
+    color: #555;
+}
+
+.profile-summary-card strong {
+    color: #333;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+    .profile-page {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .profile-page h1 {
+        font-size: 28px;
+    }
+
+    .profile-avatar {
+        width: 85px;
+        height: 85px;
+        font-size: 34px;
+    }
+
+    .profile-page .card-body {
+        padding: 20px !important;
+    }
+
+    .profile-page .btn {
+        width: 100%;
+    }
+}

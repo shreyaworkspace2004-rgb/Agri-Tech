@@ -121,6 +121,7 @@ function Navbar() {
                     {/* Logged-in User */}
                     {token && (
                         <>
+                            {/* Dashboard */}
                             <Link
                                 className="nav-link"
                                 to="/dashboard"
@@ -128,6 +129,7 @@ function Navbar() {
                                 {t("common.dashboard")}
                             </Link>
 
+                            {/* Crops */}
                             <Link
                                 className="nav-link"
                                 to="/crops"
@@ -135,6 +137,31 @@ function Navbar() {
                                 {t("common.crops")}
                             </Link>
 
+                            {/* Products */}
+                            <Link
+                                className="nav-link"
+                                to="/products"
+                            >
+                                🛒 Products
+                            </Link>
+
+                            {/* Farm Management */}
+                            <Link
+                                className="nav-link"
+                                to="/farm-management"
+                            >
+                                🌾 Farm Management
+                            </Link>
+
+                            {/* Farm Activity */}
+                            <Link
+                                className="nav-link"
+                                to="/farm-activities"
+                            >
+                                🚜 Activities
+                            </Link>
+
+                            {/* Weather */}
                             <Link
                                 className="nav-link"
                                 to="/weather"
@@ -142,6 +169,7 @@ function Navbar() {
                                 {t("common.weather")}
                             </Link>
 
+                            {/* Market Prices */}
                             <Link
                                 className="nav-link"
                                 to="/market-prices"
@@ -149,6 +177,7 @@ function Navbar() {
                                 {t("common.marketPrices")}
                             </Link>
 
+                            {/* Pest Alerts */}
                             <Link
                                 className="nav-link"
                                 to="/pest-alerts"
@@ -156,6 +185,7 @@ function Navbar() {
                                 🐛 {t("common.pestAlerts")}
                             </Link>
 
+                            {/* Soil Analysis */}
                             <Link
                                 className="nav-link"
                                 to="/soil-analysis"

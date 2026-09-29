@@ -1,0 +1,229 @@
+/* =====================================================
+   AGRI-TECH SIDEBAR
+===================================================== */
+
+.agri-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    height: 100vh;
+
+    background: linear-gradient(180deg,
+            #087f3f 0%,
+            #075c32 100%);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.12);
+
+    overflow-y: auto;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.sidebar-logo {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 22px;
+
+    border-bottom: 1px solid rgba(255,
+            255,
+            255,
+            0.12);
+}
+
+.sidebar-logo-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.sidebar-logo-text {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.sidebar-menu {
+    padding: 18px 12px;
+
+    flex: 1;
+}
+
+.sidebar-link {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 15px;
+
+    margin-bottom: 6px;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: all 0.2s ease;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,
+            255,
+            255,
+            0.12);
+
+    color: white;
+
+    transform: translateX(3px);
+}
+
+.sidebar-link.active {
+    background: #075b30;
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow:
+        inset 3px 0 0 #9ee493;
+}
+
+.sidebar-icon {
+    width: 25px;
+
+    min-width: 25px;
+
+    text-align: center;
+
+    font-size: 19px;
+}
+
+.sidebar-text {
+    white-space: normal;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.sidebar-bottom {
+    padding: 12px;
+
+    border-top: 1px solid rgba(255,
+            255,
+            255,
+            0.12);
+}
+
+.sidebar-logout {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.agri-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.agri-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.agri-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,
+            255,
+            255,
+            0.25);
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .agri-sidebar {
+        width: 220px;
+    }
+
+    .sidebar-logo-text {
+        font-size: 21px;
+    }
+
+    .sidebar-link {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .agri-sidebar {
+        width: 75px;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .sidebar-logo-text {
+        display: none;
+    }
+
+    .sidebar-logo-icon {
+        margin: 0;
+    }
+
+    .sidebar-link {
+        justify-content: center;
+
+        padding: 12px 5px;
+    }
+
+    .sidebar-text {
+        display: none;
+    }
+
+    .sidebar-icon {
+        margin: 0;
+    }
+}

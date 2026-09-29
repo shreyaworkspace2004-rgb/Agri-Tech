@@ -1,0 +1,79 @@
+.settings-page {
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.settings-page .card {
+    border-radius: 16px;
+}
+
+.settings-page .card-body {
+    padding: 25px;
+}
+
+.settings-page .form-select {
+    min-height: 45px;
+    border-radius: 10px;
+}
+
+.settings-page .form-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+.settings-item,
+.settings-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.settings-item strong,
+.settings-toggle strong {
+    color: #333;
+}
+
+.settings-item small,
+.settings-toggle small {
+    margin-top: 4px;
+}
+
+.settings-page .btn {
+    border-radius: 10px;
+}
+
+.settings-page .form-check-input {
+    width: 2.8em;
+    height: 1.4em;
+    cursor: pointer;
+}
+
+.settings-page .form-check-input:checked {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.settings-page .alert {
+    border-radius: 12px;
+}
+
+@media (max-width: 576px) {
+
+    .settings-page h1 {
+        font-size: 28px;
+    }
+
+    .settings-page .card-body {
+        padding: 20px;
+    }
+
+    .settings-item,
+    .settings-toggle {
+        align-items: flex-start;
+    }
+
+    .settings-item .btn {
+        white-space: nowrap;
+    }
+}

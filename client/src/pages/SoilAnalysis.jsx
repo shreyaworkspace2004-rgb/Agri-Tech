@@ -72,35 +72,50 @@ function SoilAnalysis() {
     // ============================================
 
     const fetchSoilAnalysis = async () => {
-
         try {
-
             setLoading(true);
             setError("");
 
+            const token = localStorage.getItem("token");
+
+            if (!token) {
+                setError("Please login again.");
+                setLoading(false);
+                return;
+            }
+
             const response = await axios.get(
-                "http://localhost:5000/api/soil-analysis"
+                "http://localhost:5000/api/soil-analysis",
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
             );
 
-            setAnalyses(response.data.analyses || []);
+            setAnalyses(
+                response.data.analyses || []
+            );
 
         } catch (error) {
-
             console.error(
                 "Soil Analysis Error:",
-                error
+                error.response?.data || error
             );
 
             setError(
+                error.response?.data?.message ||
                 "Failed to load soil analysis data."
             );
 
         } finally {
-
             setLoading(false);
-
         }
     };
+
+    // ============================================
+    // LOAD SOIL ANALYSIS ON PAGE LOAD
+    // ============================================
 
     useEffect(() => {
         fetchSoilAnalysis();

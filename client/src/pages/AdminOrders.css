@@ -1,0 +1,69 @@
+/* =====================================================
+   ADMIN ORDERS PAGE
+===================================================== */
+
+.admin-orders-page {
+    min-height: 100vh;
+    background: #f6f8f6;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.admin-orders-page .card {
+    border-radius: 16px;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.admin-orders-page .table {
+    margin-bottom: 0;
+}
+
+.admin-orders-page thead th {
+    background: #f1f8f3;
+    color: #198754;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.admin-orders-page tbody tr {
+    transition: background 0.2s ease;
+}
+
+.admin-orders-page tbody tr:hover {
+    background: #f8fbf8;
+}
+
+/* =====================================================
+   BADGES
+===================================================== */
+
+.admin-orders-page .badge {
+    border-radius: 20px;
+    padding: 7px 10px;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.admin-orders-page .btn-success {
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .admin-orders-page h1 {
+        font-size: 1.7rem;
+    }
+
+}

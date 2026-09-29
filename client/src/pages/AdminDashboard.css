@@ -1,0 +1,191 @@
+/* =====================================================
+   ADMIN DASHBOARD
+===================================================== */
+
+.admin-dashboard-page {
+    min-height: 100vh;
+    background: #f6f8f5;
+}
+
+/* =====================================================
+   STAT ICON
+===================================================== */
+
+.admin-stat-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.admin-dashboard-page .card {
+    border-radius: 14px;
+}
+
+.admin-dashboard-page .card-body {
+    padding: 1.4rem;
+}
+
+/* =====================================================
+   STATUS BOXES
+===================================================== */
+
+.status-box {
+    text-align: center;
+    padding: 18px 10px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: 0.2s ease;
+}
+
+.status-box:hover {
+    transform: translateY(-2px);
+}
+
+.status-box h4 {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.status-box span {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* =====================================================
+   STATUS COLORS
+===================================================== */
+
+.status-box.pending {
+    border-left: 4px solid #ffc107;
+}
+
+.status-box.confirmed {
+    border-left: 4px solid #198754;
+}
+
+.status-box.processing {
+    border-left: 4px solid #0d6efd;
+}
+
+.status-box.shipped {
+    border-left: 4px solid #6f42c1;
+}
+
+.status-box.delivered {
+    border-left: 4px solid #20c997;
+}
+
+.status-box.cancelled {
+    border-left: 4px solid #dc3545;
+}
+
+/* =====================================================
+   ORDER STATUS BADGES
+===================================================== */
+
+.admin-dashboard-page .status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.admin-dashboard-page .status-confirmed {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.admin-dashboard-page .status-processing {
+    background: #cfe2ff;
+    color: #084298;
+}
+
+.admin-dashboard-page .status-shipped {
+    background: #e2d9f3;
+    color: #432874;
+}
+
+.admin-dashboard-page .status-delivered {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.admin-dashboard-page .status-cancelled {
+    background: #f8d7da;
+    color: #842029;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.admin-dashboard-page table {
+    margin-bottom: 0;
+}
+
+.admin-dashboard-page th {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.admin-dashboard-page td {
+    vertical-align: middle;
+}
+
+.admin-dashboard-page tbody tr {
+    transition: background 0.2s ease;
+}
+
+.admin-dashboard-page tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .admin-dashboard-page h1 {
+        font-size: 1.7rem;
+    }
+
+    .admin-dashboard-page h4 {
+        font-size: 1.15rem;
+    }
+
+    .admin-stat-icon {
+        font-size: 1.7rem;
+    }
+
+    .status-box {
+        padding: 14px 8px;
+    }
+
+    .status-box h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .admin-dashboard-page .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .admin-dashboard-page h1 {
+        font-size: 1.45rem;
+    }
+
+    .admin-dashboard-page .btn {
+        width: 100%;
+    }
+
+    .admin-dashboard-page .d-flex.justify-content-between {
+        align-items: stretch !important;
+    }
+}
